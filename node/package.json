@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon -x 'babel-node tests.js | faucet'"
+    "test": "babel-node tests.js | faucet",
+    "test-watch": "nodemon -x 'npm t'"
   },
   "author": "",
   "license": "ISC",
