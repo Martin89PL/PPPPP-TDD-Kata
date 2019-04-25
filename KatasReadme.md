@@ -20,18 +20,18 @@ Optional extras:
 - A bounded capacity can be specified, so there is an upper
   limit to the number of items contained, with the least
   recently added items dropped on overflow.
-	   
+
 See [a video tutorial showing how to solve this kata in Python](http://medrela.com/rul-kata).
-	 
+
 More tests:
-	
+
 - While getting items by index, supplied index-value should be within the bounds of List [eg.
   if maximum item counts of list is 5 then supplied index is less than 4 as index starts from 0 (zero)]
 - Negative index value not allowed [>0]
 - Size limit is must if not supplied make 5 as default [0-4]
 - List can be non-sizable means without upper limit list can be created [Hint-try property or constructor initializers]
 
-## String Sum Kata 
+## String Sum Kata
 
 * Write a simple String Sum utility with a function <em>string Sum(string num1, string num2)</em>, which can accept only natural numbers and will return their sum. Replace entered number with <em>0 (zero)</em> if entered number is not a natural number.
 * Stat with a simplest test case with an empty string
@@ -77,12 +77,6 @@ More tests:
 	  instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both
 	  three and five print "FizzBuzz".
 
-### Including new implementation to The FizzBuzz Kata
-	- Added a different implementation for FizzBuzz using Reactive extensions.
-	- The changes are described at: http://blog.drorhelper.com/2015/02/fizzbuzz-tdd-kata-using-reactive.html
-	- Pull Request by: https://github.com/dhelper (manually merged by @garora)
-	  
-
 #### Steps:
 
 	Lets divide this into different steps so, we can easily write and test this.
@@ -113,16 +107,16 @@ More tests:
 ### The PrimeFactor Kata (via [Uncle Bob](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata))
 
 ### The PrimeComposite Kata
-	- Write a program that prints numbers within specified range lets say 1 to 100. 
-	- If number is ```prime``` print 'prime' instead of the number. 
+	- Write a program that prints numbers within specified range lets say 1 to 100.
+	- If number is ```prime``` print 'prime' instead of the number.
 	- If number is ```composite``` but not ```even``` print 'composite' instead of number.
-	- Else print number. 
+	- Else print number.
 	- Reference(s)
-		- [Prime numbers](https://en.wikipedia.org/wiki/Prime_number), 
-		- [Composite numbers](https://en.wikipedia.org/wiki/Composite_number), 
+		- [Prime numbers](https://en.wikipedia.org/wiki/Prime_number),
+		- [Composite numbers](https://en.wikipedia.org/wiki/Composite_number),
 		- [odd even](https://en.wikipedia.org/wiki/Parity_(mathematics))
-  
-### Steps   
+
+### Steps
 	- Prints numbers from 1 to 100.
 	- Print "Prime" instead of number, if the number is prime, means ```number greater than 1 that has no positive divisors other than 1 and itself```.
 	- Print "Composite" instead of number, if the number is composite, means ```number has at least one positive divisor other than one or the number itself. In other words, a composite number is any integer greater than one that is not a prime number``` but not a ```even number```.
