@@ -1,2 +1,2 @@
 ### Description
-Simply defines the Test Driven Development Katas. In this, lets try to create most famous katas to understand what are exactly Katas.
+TDD Katas in one place, possibly with minimal development stacks that allow quick start (PRs welcome)
