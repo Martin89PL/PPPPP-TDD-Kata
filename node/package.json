@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "babel-node tests.js | faucet",
+    "test": "babel-node ./Harry_Potter/tests.js | faucet",
     "test-watch": "nodemon -x 'npm t'"
   },
   "author": "",
