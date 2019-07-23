@@ -1,4 +1,5 @@
 import BooksDiscounts from './BooksDiscounts';
+import DiscountCalculator from './DiscountsCalculator';
 
 export default class BookStore {
 
@@ -14,9 +15,9 @@ export default class BookStore {
     countPrice(orderedBooks) {
         let differentTitlesCount = this.countDifferenceTitles(orderedBooks);
 
-        if (differentTitlesCount < 6) {
-            return this.defaultBookPrice * ((100 - this.getDiscount(orderedBooks.length)) / 100);
-        }
+        let discount = DiscountCalculator.calculate(differentTitlesCount.length);
+
+        return this.calculate(discount, orderedBooks.length);
     }
 
     /**
@@ -24,17 +25,19 @@ export default class BookStore {
      * @param {array} orderedBooks 
      */
     countDifferenceTitles(orderedBooks) {
-        let differenceTitles = orderedBooks.filter((value, index) => {
+        let differentTitles = orderedBooks.filter((value, index) => {
             return orderedBooks.indexOf(value) == index;
         });
-        return differenceTitles.length;
+
+    
+        return differentTitles;
     }
 
     /**
-     * Get value of discount
-     * @param {number} differenceTitles 
+     * Calculate summary cost
+     * @param {*} discount 
      */
-    getDiscount(differenceTitles = 0) {
-        return this.BooksDiscounts[differenceTitles];
+    calculate(discount, booksNumber) {
+       return this.defaultBookPrice * booksNumber * ((100 - discount) / 100);
     }
 };
